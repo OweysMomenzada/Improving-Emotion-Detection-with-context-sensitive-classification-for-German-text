@@ -26,4 +26,4 @@ As mentioned we do not have any data to implement an Emotion Detection model. Th
 ![image1](https://github.com/OweysMomenzada/Improving-Emotion-Detection-with-context-sensitive-classification-for-German-text/blob/main/images/image1.png)
 
 We also filter negations to avoid false labeling. In this way we could generate more than 6000 sentences based on 680 triggerwords. However, since this dataset has no
-negations, we also use some english dialogues from various datasets (see <i>citation</i>) to solve this issue. We use the Google API (see ....) for translation. Finally, we have a dataset with over 11 000 sentences for five emotions: <i>anger, sadness, joy, fear and neutral </i>. 
+negations, we also use some english dialogues from various datasets (see <i>citation</i>) to solve this issue. We use the Google NLP API (see ....) to translate the english dataset to german sentences. Finally, we have a dataset with over 11 000 sentences for five emotions: <i>anger, sadness, joy, fear and neutral </i> (see .....). 
