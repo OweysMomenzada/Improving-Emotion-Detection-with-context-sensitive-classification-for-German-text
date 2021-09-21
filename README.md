@@ -20,6 +20,7 @@ generated based on negative emotions (fear, anger, sadness) and positive emotion
 
 ## Data
 <big><i>ALL DATA AND FUNCTIONS CAN BE SEEN IN (.......)</big></i>
+
 As mentioned we do not have any data to implement an Emotion Detection model. Therefore, we need to build a dataset on our own. In the first step we build our dataset based on the triggerwords (for triggerwords, see citation or /..........!!!!!). We than send our triggerwords to an API (<a href="https://www.dwds.de/d/api">DWDS-API</a>) and then generate sentences based on these words. This could look as followed: 
 
 ![image1](https://github.com/OweysMomenzada/Improving-Emotion-Detection-with-context-sensitive-classification-for-German-text/blob/main/images/image1.png)
