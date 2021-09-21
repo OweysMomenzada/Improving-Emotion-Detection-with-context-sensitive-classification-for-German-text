@@ -31,7 +31,7 @@ negations, we also use some english dialogues from various datasets (see <i>cita
 ## Model
 <big><i>MODEL AND TRAINING CAN BE SEEN IN (.......)</big></i>
 
-Since SCHICKLER used triggerwords for detection, the running time was comparatively really fast. This is important, since SCHICKLER is getting a lot of data into their pipelines and therefore a short running time is costly more efficient. Therefore, we need a model which is good in performance and accuracy. In our experiments, we noticed that simple LSTMs are way more efficient in running time (compared to BERT, BiLSTM, CNN+LSTM) and also have a decent accuracy. 
+Since SCHICKLER used triggerwords for detection, the running time was comparatively really fast. This is important, since SCHICKLER is getting a lot of data into their pipelines and therefore a short running time is costly more efficient. Therefore, we need a model which is good in performance and accuracy. In our experiments, we noticed that simple LSTMs are way more efficient in running time (compared to BERT, BiLSTM, CNN+LSTM) and also have a decent accuracy. Because of that, we will use the LSTM model to train.
 
 A prediction on our model could look as follows (For more examples and results see....):
 ```
