@@ -8,10 +8,19 @@ In my time at <a href="https://www.schickler.de/">SCHICKLER</a> I was allowed to
 The Drive project has data from various regional publishers throughout Germany. 
 My task was to improve an existing Emotion Classifier used for their dataset on Google BigQuery. In addition, I have also implemented Sentiment Analysis for their dataset which has not been implemented before.
 
-##### What is Emotion Detection/Sentiment Analysis and why is a solution relevant?
+#### What is Emotion Detection/Sentiment Analysis and why is a solution relevant?
 Emotion Detection simply detects emotions in a text. For instance, we could detect <i>joy, fear, fear and sadness</i> in our text. With Sentiment Analysis the text can be labeled (most common) as <i>negative, positive or neutral</i>. Which sounds so easy, is actually quite challenging. There is no existing data for German Emotion Detection and also
 Sentiment Analysis is poorly documented. With my approach we can actually build a decent Emotion Classifier for German text and could also outperform existing Sentiment Analysis approaches on some cases (such as the <a href="https://huggingface.co/oliverguhr/german-sentiment-bert">Oliverguhr</a> Sentiment Analysis model, which is based on <a href="https://arxiv.org/abs/1810.04805">BERT</a>.).
 
+#### What is my solution?
+Before, SCHICKLER used triggerwords to get emotions from the text. The problem here is that context can not be taken into account. For instance,
+"das freut mich gar nicht" (translates to: "I am not pleased at all") would be positive, since the triggerword would be "freuen" (translates to: pleased).
+My solution is to train a model on labeled dialogues and example sentences based on the triggerwords (see section <i>Data</i>). The Sentiment are going to be
+generated based on negative emotions (fear, anger, sadness) and positive emotions (joy). We also will use a "neutral" emotion to neutralize overloaded emotions. This will be explained in detail in the following sections.
+
 ## Data
 
-As mentioned we do not have any 
+As mentioned we do not have any data to implement an Emotion Detection model. Therefore, we need to build a dataset on our own. In the first step we build our dataset based on the triggerwords (for triggerwords, see citation or /..........!!!!!). We than send our triggerwords to an API (<a href="https://www.dwds.de/d/api">DWDS-API</a>) and then generate sentences based on these words. This could look as followed: 
+
+
+![image1](https://github.com/OweysMomenzada/Improving-Emotion-Detection-with-context-sensitive-classification-for-German-text/blob/main/images/image1.png)
