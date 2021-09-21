@@ -1,6 +1,6 @@
 <big><b> Author: Oweys Momenzada </big></b>
 
-# Improving Emotion Detection with context sensitive classification for German text
+# Improving Emotion Detection with context sensitive classification for German text corpus
 <big><i> FOR DEEPER INSIGHT INTO THE WORK AND APPROACH, ALL NOTEBOOKS ARE WELL DOCUMENTED AND PROVIDED ON THIS GITHUB REPOSITORY. </i></big>
 
 #### What is this repository about?
@@ -27,3 +27,20 @@ As mentioned we do not have any data to implement an Emotion Detection model. Th
 
 We also filter negations to avoid false labeling. In this way we could generate more than 6000 sentences based on 680 triggerwords. However, since this dataset has no
 negations, we also use some english dialogues from various datasets (see <i>citation</i>) to solve this issue. We use the Google NLP API (see ....) to translate the english dataset to german sentences. Finally, we have a dataset with over 11 000 sentences for five emotions: <i>anger, sadness, joy, fear and neutral </i> (see .....). 
+
+## Model
+<big><i>MODEL AND TRAINING CAN BE SEEN IN (.......)</big></i>
+
+Since SCHICKLER used triggerwords for detection, the running time was comparatively really fast. This is important, since SCHICKLER is getting a lot of data into their pipelines and therefore a short running time is costly more efficient. Therefore, we need a model which is good in performance and accuracy. In our experiments, we noticed that simple LSTMs are way more efficient in running time (compared to BERT, BiLSTM, CNN+LSTM) and also have a decent accuracy. 
+
+A prediction on our model could look as follows (For more examples and results see....):
+```
+# translated to: Today's weather forecast: there will be a tornado today
+predict('Wetterbericht von heute: heute wird es einen Tornado geben')
+
+>>>{'anger': 0.013,
+>>>  'fear': 0.9147,
+>>>  'joy': 0.0105,
+>>>  'neutral': 0.0039,
+>>>  'sadness': 0.058}
+```
