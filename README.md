@@ -45,10 +45,10 @@ predict('Wetterbericht von heute: heute wird es einen Tornado geben')
 >>>  'sadness': 0.058}
 ```
 
-# Sentiment Analysis
+## Sentiment Analysis
 
 
-# Real world Application, API & Deployment
+## Real world Application, API & Deployment
 A Real World Application on some Headliners of articles can be seen here "Results and Examples.ipynb"
 
 We provide this for the SCHICKLERS database on an API. We first store the trained model into a Bucket in Google Cloud Storage and than load it into GCP AI Platform. We then implement Textcleaning and other Feature Engineering steps and also the communcation with the trained model on AI platform on a different .py-file (see "....."). In addition, we use FLASK for our RESTful API. We implement a POST request to send requests to the API. We then finally deploy our API on APP Engine to provide for EDA purposes and our dataset.
