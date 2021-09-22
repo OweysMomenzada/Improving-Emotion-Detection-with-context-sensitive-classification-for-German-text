@@ -45,6 +45,9 @@ predict('Wetterbericht von heute: heute wird es einen Tornado geben')
 >>>  'sadness': 0.058}
 ```
 
+# Sentiment Analysis
+
+
 # Real world Application, API & Deployment
 A Real World Application on some Headliners of articles can be seen here "Results and Examples.ipynb"
 
