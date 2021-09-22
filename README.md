@@ -46,6 +46,26 @@ predict('Wetterbericht von heute: heute wird es einen Tornado geben')
 ```
 
 ## Sentiment Analysis
+The Sentiments are defined as [<i>negative, likely negative, neutral, likely positive</i>] based on the emotions. Negative emotion will output a negative sentiment score and
+positive emotions will output a positive sentiment score. For the threshold of each sentiment see ...... 
+
+Finally our results look like this:
+```
+example = create_emotions_sentiment("Heute spielen FC Bayern gegen den FC Barcelona.")
+
+print(example)
+
+>>>{'emotions': 
+>>>  {'anger': 0.0665030256, 
+>>>  'fear': 0.1034225, 
+>>>  'joy': 0.545249, 
+>>>  'neutral': 0.0235871468, 
+>>>  'sadness': 0.261238247},
+>>>sentiments': 
+>>>  {'sentiment_label': 
+>>>  'neutral', 
+>>>  'sentiment_valence': 0.0905028532}}
+```
 
 
 ## Real world Application, API & Deployment
@@ -56,3 +76,5 @@ We provide this for the SCHICKLERS database on an API. We first store the traine
 &nbsp;
 
 ![Workflow](https://github.com/OweysMomenzada/Evergreen-Content-Classifier-for-german-Text/blob/main/EDA/images/Worfklow.png)
+
+## Citation
