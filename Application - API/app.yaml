@@ -1,0 +1,14 @@
+entrypoint: "gunicorn -b :$PORT main:app"
+env: flex
+runtime: python
+service: emotion-sentiment-api
+runtime_config: 
+  python_version: 3.7
+
+
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 2
+  memory_gb: 3
+  disk_size_gb: 50
