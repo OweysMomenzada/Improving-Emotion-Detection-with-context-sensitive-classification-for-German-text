@@ -62,8 +62,7 @@ print(example)
 >>>  'neutral': 0.0235871468, 
 >>>  'sadness': 0.261238247},
 >>>sentiments': 
->>>  {'sentiment_label': 
->>>  'neutral', 
+>>>  {'sentiment_label': 'neutral', 
 >>>  'sentiment_valence': 0.0905028532}}
 ```
 
