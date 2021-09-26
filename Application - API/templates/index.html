@@ -1,0 +1,42 @@
+<h1>Emotion and Sentiment detection</h1>
+<p><em>Author</em>: Oweys Momenzada</p>
+<p><em>Date of deployment</em>: 21.09.2021</p>
+<p>&nbsp;</p>
+<h3>Attribute:</h3>
+<ul>
+<li><em>{"sentiment"}&nbsp;</em> - Beinhaltet "<em>sentiment_valence</em>" welches den sentiment score beschreibt und "<em>sentiment_label</em>", welches einen entg&uuml;ltiges label basierend auf den Score berechnet.
+<ul>
+<li>{"<em>sentiment_valence</em>"} - Float zwischen <em>-1</em> und <em>1</em></li>
+<li>{"<em>sentiment_label</em>"} - label mit [<em>negative, likely negative, neutral, likely positive, positive</em>]</li>
+</ul>
+</li>
+<li><em>{"emotion"} -&nbsp;</em>beinhaltet f&uuml;nf Emotionen: <em>fear, anger, sadness, joy, neutral</em>
+<ul>
+<li><em>{"fear", "anger", "sadness", "joy", "neutral"} - F</em>loat zwischen <em>0 bis 1</em></li>
+</ul>
+</li>
+<li>
+<div>
+<div><em>{"is_truncated": Bool} -&nbsp;</em>Wurde der Text gek&uuml;rzt? Maximal L&auml;nge eines Textes sind 150 W&ouml;rter.</div>
+</div>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h3><strong>Python-Code zum kopieren</strong>:</h3>
+<p><code>import requests</code></p>
+<p><code>url = "secret.url.app/api"</code></p>
+<p><code>def create_emotions_sentiment(text):<br />&nbsp; &nbsp; json_text = {'text' : text}<br />&nbsp; &nbsp; pred = requests.post(url,json=json_text)<br /><br />&nbsp; &nbsp; return pred.json() </code></p>
+<p><code></code></p>
+<h3>Beispiel:</h3>
+<p><code>example = create_emotions_sentiment("Nun der Wetterbericht von heute")</code></p>
+<p><code>print(example)</code></p>
+<pre>&gt;&gt;&gt;{'emotions': {'anger': 0.0129549252,
+&gt;&gt;&gt;  'fear': 0.914692163,
+&gt;&gt;&gt;  'joy': 0.0104610957,
+&gt;&gt;&gt;  'neutral': 0.00391874,
+&gt;&gt;&gt;  'sadness': 0.0579731092},
+&gt;&gt;&gt; 'is_truncated': False,
+&gt;&gt;&gt; 'sentiments': {'sentiment_label': 'negative',<br />&gt;&gt;&gt; 'sentiment_valence': -0.97516}}</pre>
+<p><code></code></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
