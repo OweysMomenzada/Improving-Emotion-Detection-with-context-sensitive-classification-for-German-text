@@ -77,3 +77,34 @@ We provide this for the SCHICKLERS database on an API. We first store the traine
 ![Workflow](https://github.com/OweysMomenzada/Evergreen-Content-Classifier-for-german-Text/blob/main/EDA/images/Worfklow.png)
 
 ## Citation
+#### Used Datasets
+- <b>dailydialog</b>: 2017, 102k <br>
+- <b>emotion-stimulus</b>: 2015<br>
+- <b>isear</b>:	1990	<br>
+
+##### Used triggerwords
+``` 
+@book{aschenbrenner2019emotionserkennung,
+  title={Emotionserkennung bei Nachrichtenkommentaren mittels Convolutional Neural Networks und Label Propagationsverfahren},
+  author={Aschenbrenner, A. and Spies, M.},
+  url={https://core.ac.uk/download/pdf/275811762.pdf},
+  year={2019},
+  publisher={Universit{\"a}tsbibliothek der Ludwig-Maximilians-Universit{\"a}t},
+  pages={339-352}
+}
+
+```
+
+
+Please cite this GitHub if you use this work.
+```
+@misc{momenzada_schickler_2021_emotion, 
+      title={Improving Emotion Detection with context sensitive classification for German text corpus}, 
+      author={Momenzada, Oweys and SCHICKLER}, 
+      url={https://github.com/OweysMomenzada/Improving-Emotion-Detection-with-context-sensitive-classification-for-German-text-corpus}, 
+      journal={Github}, 
+      year={2021}, 
+      month={Sep}
+      } 
+```
+
