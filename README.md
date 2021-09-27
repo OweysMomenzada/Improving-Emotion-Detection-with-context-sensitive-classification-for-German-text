@@ -29,11 +29,11 @@ We also filter negations to avoid false labeling. In this way we could generate 
 negations, we also use some english dialogues from various datasets (see <i>citation</i>) to solve this issue. We use the Google NLP API (see <i>"./Data collecting/Emotiondataset_builder.py"</i>) to translate the english dataset to german sentences. Finally, we have a dataset with over 11 000 sentences for five emotions: <i>anger, sadness, joy, fear and neutral </i> (see <i>"./Data collecting/fullset.csv"</i>). 
 
 ## Model
-<big><i>MODEL AND TRAINING CAN BE SEEN IN (.......)</big></i>
+<big><i>MODEL AND TRAINING CAN BE SEEN IN "./Model training/Model training.ipynb"</big></i>
 
 Since SCHICKLER used triggerwords for detection, the running time was comparatively really fast. This is important, since SCHICKLER is getting a lot of data into their pipelines and therefore a short running time is costly more efficient. Therefore, we need a model which is good in performance and accuracy. In our experiments, we noticed that simple LSTMs are way more efficient in running time (compared to BERT, BiLSTM, CNN+LSTM) and also have a decent accuracy. Because of that, we will use the LSTM model to train.
 
-A prediction on our model could look as follows (For more examples and results see....):
+A prediction on our model could look as follows (For more examples and results see <i>"./Results and Examples.ipynb"</i>):
 ```
 # translated to: Today's weather forecast: there will be a tornado today
 predict('Wetterbericht von heute: heute wird es einen Tornado geben')
@@ -47,7 +47,7 @@ predict('Wetterbericht von heute: heute wird es einen Tornado geben')
 
 ## Sentiment Analysis
 The Sentiments are defined as [<i>negative, likely negative, neutral, likely positive</i>] based on the emotions. Negative emotion will output a negative sentiment score and
-positive emotions will output a positive sentiment score. For the threshold of each sentiment see ...... 
+positive emotions will output a positive sentiment score. For the threshold of each sentiment see <i>"./Application - API/main.py"</i>.
 
 Finally our results look like this:
 ```
@@ -70,7 +70,7 @@ print(example)
 ## Real world Application, API & Deployment
 A Real World Application on some Headliners of articles can be seen here "Results and Examples.ipynb"
 
-We provide this for the SCHICKLERS database on an API. We first store the trained model into a Bucket in Google Cloud Storage and than load it into GCP AI Platform. We then implement Textcleaning and other Feature Engineering steps and also the communcation with the trained model on AI platform on a different .py-file (see "....."). In addition, we use FLASK for our RESTful API. We implement a POST request to send requests to the API. We then finally deploy our API on APP Engine to provide for EDA purposes and our dataset.
+We provide this for the SCHICKLERS database on an API. We first store the trained model into a Bucket in Google Cloud Storage and than load it into GCP AI Platform. We then implement Textcleaning and other Feature Engineering steps and also the communcation with the trained model on AI platform on a different .py-file (see "<i>"./Application - API/main.py"</i>"). In addition, we use FLASK for our RESTful API. We implement a POST request to send requests to the API. We then finally deploy our API on APP Engine to provide for EDA purposes and our dataset.
 
 &nbsp;
 
