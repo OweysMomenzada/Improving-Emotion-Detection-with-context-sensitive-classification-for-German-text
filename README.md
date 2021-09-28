@@ -49,6 +49,8 @@ predict('Wetterbericht von heute: heute wird es einen Tornado geben')
 The Sentiments are defined as [<i>negative, likely negative, neutral, likely positive</i>] based on the emotions. Negative emotion will output a negative sentiment score and
 positive emotions will output a positive sentiment score. For the threshold of each sentiment see <i>"./Application - API/main.py"</i>.
 
+The Sentiment Analysis approach of this work could experimentally outperform state-of-art opensource projects for German Sentiment-Analysis, such as the <a href="https://huggingface.co/oliverguhr/german-sentiment-bert">Oliverguhr</a>-project. 
+
 Finally our results look like this:
 ```
 example = create_emotions_sentiment("Heute spielen FC Bayern gegen den FC Barcelona.")
