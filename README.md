@@ -1,6 +1,7 @@
 <big><b> Author: Oweys Momenzada </big></b>
 
-# Improving Emotion Detection with context sensitive multi-classification for German text corpus
+# Improving Emotion Detection with context sensitive multi-classification for German text corpus with XLM-RoBERTa 
+
 <big><i> FOR DEEPER INSIGHT INTO THE WORK AND APPROACH, ALL NOTEBOOKS ARE WELL DOCUMENTED AND PROVIDED ON THIS GITHUB REPOSITORY. </i></big>
 
 #### What is this repository about?
